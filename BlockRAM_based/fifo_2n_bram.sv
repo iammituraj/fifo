@@ -134,7 +134,7 @@ assign rdptr = rdptr_rg[PTR_SZ-1:0];
 
 // Full and Empty internal
 assign full  = ((wrptr == rdptr) &&  is_wrap) ;
-assign empty = ((wrptr == rdptr) && !is_wrap) | empty_extnd_rg ; ;
+assign empty = ((wrptr == rdptr) && !is_wrap) | empty_extnd_rg ;
 
 // Write and Read Enables conditioned
 assign wren  = i_wren & !full  ;  // Do not push if FULL
